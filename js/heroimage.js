@@ -16,3 +16,4 @@ function togglePlay() {
 
 // Evento de clic en el botón de imagen
 playButton.addEventListener("click", togglePlay);
+
