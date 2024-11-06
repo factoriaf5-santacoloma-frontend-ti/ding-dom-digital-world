@@ -3,6 +3,12 @@ body{
     margin: 0;
     box-sizing: border-box;
 }
+button{
+    color:black;
+    font-style: italic;
+    background-color: #65D3DA;
+    border-radius: 9px;
+}
 /*---------------este es el navegador--------------------------*/
 p{
     font-family: 'Lato';
