@@ -9,12 +9,28 @@
      <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="/css/about-us.css">
     <title>About Us</title>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,es',  
+                autoDisplay: false,  
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
-    <button id="languageSwitchButton">tranlate</button>
+
+<button id="translateButton">Translate to Spanish</button>
+
+
+<div id="google_translate_element"></div>
 
 
     <header>
+
         <div class="contenedor">
             <img id="logo" src="/assets/images/Captura_desde_2024-10-29_13-09-01-removebg-preview.png" alt="This is the Ding Dom banner ">
            <button class="abrir-menu"> <img src="/assets/icons/icons8-menu-96.png" alt="amburguesa"></button>
@@ -111,7 +127,7 @@
         
     <script src="/js/index.js"></script>
     <script src="/js/about-us.js"></script>
-    <script src="/js/translate.js"></script>
+    <script src="js/tranlate.js"></script>
 
     
 

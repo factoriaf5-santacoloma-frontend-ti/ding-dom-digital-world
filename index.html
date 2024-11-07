@@ -1,44 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
     <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Neucha&display=swap"
-        rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- Font Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&family=Neucha&display=swap" rel="stylesheet">
+
+    <!-- CSS Links -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/styleCarrusel.css">
     <link rel="stylesheet" href="css/heroimage.css">
-    <title>Home</title>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,es',  // Make sure Spanish is included
+                autoDisplay: false,  // Don't display the translation automatically, we will trigger it manually
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </head>
 
 <body>
- 
-    <div class="language-buttons">
-        <button onclick="changeLanguage('en')">Change to English</button>
-        <button onclick="changeLanguage('es')">Change to Spanish</button>
-      </div>
-      
+    <!-- Translation Button -->
+    <button id="translateButton">Translate to Spanish</button>
 
-  
+    <!-- Google Translate Element (The translation dropdown will be triggered manually) -->
+    <div id="google_translate_element"></div>
+
+    <!-- Header Section -->
     <header>
         <div class="heroimage">
             <video src="/assets/Video/Animation_Principal.mp4" autoplay muted loop></video>
-            <p> music is what moves us</p>
-
+            <p id="hero-text-en">Music is what moves us</p>
+            <p id="hero-text-es" style="display:none;">La música es lo que nos mueve</p>
             <audio id="audioPlayer" autoplay preload loop>
                 <source src="assets/sounds/hayunamigoenmi.m4a" type="audio/mpeg">
             </audio>
-
             <img class="no-music" src="/assets/icons/no-music.png" alt="Stop music" id="playButton">
-
             <div>
                 <a href="#gomenu">
                     <img class="go-home" src="/assets/icons/chevron-down.png" alt="go to">
@@ -46,21 +54,14 @@
             </div>
         </div>
         <div id="gomenu" class="contenedor">
-            <img id="logo" src="assets/images/Captura_desde_2024-10-29_13-09-01-removebg-preview.png" alt="This is the Ding Dom banner ">
-           <button class="abrir-menu"> <img src="assets/icons/icons8-menu-96.png" alt="amburguesa"></button>
-
-                <a href="#main">
-                    <a href="#botonhome"><img class="go-home" src="/assets/icons/chevron-down.png" alt="go to"></a>
-                </a>
-            </div>
-        </div>
-        <div class="contenedor">
-            <img id="logo" src="assets/images/logo-laptop.png"
-                alt="This is the Ding Dom banner ">
-            <button class="abrir-menu"> <img src="assets/icons/icons8-menu-96.png" alt="amburguesa"></button>
-
+            <img id="logo" src="assets/images/Captura_desde_2024-10-29_13-09-01-removebg-preview.png" alt="Ding Dom banner">
+            <button class="abrir-menu">
+                <img src="assets/icons/icons8-menu-96.png" alt="menu">
+            </button>
             <nav class="nav" id="nav">
-                <button id="cerrar"><img src="assets/icons/icons8-x-64.png" alt="x"></button>
+                <button id="cerrar">
+                    <img src="assets/icons/icons8-x-64.png" alt="close menu">
+                </button>
                 <ul class="nav-list">
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="views/instrument.html">INSTRUMENTS</a></li>
@@ -68,55 +69,63 @@
                 </ul>
             </nav>
         </div>
-
     </header>
-    <main class="imagen-debajo">
-        <img src="assets/images/Fotos del equipo/fotogrupal.jpg" alt="">
-        <p class="descripcion">We are the Digital World team, a multidisciplinary group passionate about technology and creativity.</p>
 
-        <!-- Contenedor principal -->
+    <!-- Main Section -->
+    <main class="imagen-debajo">
+        <img src="assets/images/Fotos del equipo/fotogrupal.jpg" alt="Team Photo">
+        <p class="descripcion" id="team-desc-en">We are the Digital World team, a multidisciplinary group passionate about technology.</p>
+        <p class="descripcion" id="team-desc-es" style="display:none;">Somos el equipo de Digital World, un grupo multidisciplinario apasionado por la tecnología.</p>
+
+        <!-- Carousel Section -->
         <div class="carousel-container">
-            <!-- Versión Desktop -->
+            <!-- Desktop Carousel -->
             <div class="carousel-3d" id="carousel3D">
                 <div class="card" data-index="0">
                     <img src="assets/piano.png" alt="Piano">
                     <h2>Piano</h2>
-        <p>El piano, con sus 24 teclas, convierte los ritmos en melodías cautivadoras. ¡Un instrumento lleno de magia!</p>
-        <a href="views/instrument.html" class="go-button">GO!</a>
+                    <p id="piano-desc-en">The piano, with its 24 keys, turns beats into captivating melodies. An instrument full of magic!</p>
+                    <p id="piano-desc-es" style="display:none;">El piano, con sus 24 teclas, convierte los ritmos en melodías cautivadoras. ¡Un instrumento lleno de magia!</p>
+                    <a href="views/instrument.html" class="go-button">GO!</a>
                 </div>
                 <div class="card active" data-index="1">
                     <img src="assets/drums.png" alt="Batería">
                     <h2>Batería</h2>
-                    <p>La batería, con su ritmo poderoso, marca el pulso de la música. ¡Esencial para el ritmo y la emoción!</p>
+                    <p id="drums-desc-en">The drums, with their powerful rhythm, set the pulse of the music. Essential for rhythm and emotion!</p>
+                    <p id="drums-desc-es" style="display:none;">La batería, con su ritmo poderoso, marca el pulso de la música. ¡Esencial para el ritmo y la emoción!</p>
                     <a href="views/instrument.html" class="go-button">GO!</a>
                 </div>
                 <div class="card" data-index="2">
                     <img src="assets/guitar.png" alt="Guitarra">
-                    <h2>Guitarra</h2>
-                    <p>La guitarra, con sus vibrantes cuerdas, crea melodías que resuenan en el corazón. ¡Un instrumento lleno de pasión!</p>
+                    <h2>Guitar</h2>
+                    <p id="guitar-desc-en">The guitar, with its vibrant strings, creates melodies that resonate in the heart. An instrument full of passion!</p>
+                    <p id="guitar-desc-es" style="display:none;">La guitarra, con sus vibrantes cuerdas, crea melodías que resuenan en el corazón. ¡Un instrumento lleno de pasión!</p>
                     <a href="views/instrument.html" class="go-button">GO!</a>
                 </div>
             </div>
-
-            <!-- Versión Mobile -->
+            	
+            <!-- Mobile Carousel -->
             <div class="carousel-mobile" id="carouselMobile">
                 <div class="slider">
                     <div class="slide">
                         <img src="assets/piano.png" alt="Piano">
                         <h2>Piano</h2>
-                        <p>El piano, con sus 24 teclas, convierte los ritmos en melodías cautivadoras. ¡Un instrumento lleno de magia!</p>
+                        <p id="piano-desc-mob-en">The piano, with its 24 keys, turns beats into captivating melodies. An instrument full of magic!</p>
+                        <p id="piano-desc-mob-es" style="display:none;">El piano, con sus 24 teclas, convierte los ritmos en melodías cautivadoras. ¡Un instrumento lleno de magia!</p>
                         <a href="views/instrument.html" class="go-button">GO!</a>
                     </div>
                     <div class="slide">
                         <img src="assets/drums.png" alt="Batería">
                         <h2>Batería</h2>
-                        <p>La batería, con su ritmo poderoso, marca el pulso de la música. ¡Esencial para el ritmo y la emoción!</p>
+                        <p id="drums-desc-mob-en">The drums, with their powerful rhythm, set the pulse of the music. Essential for rhythm and emotion!</p>
+                        <p id="drums-desc-mob-es" style="display:none;">La batería, con su ritmo poderoso, marca el pulso de la música. ¡Esencial para el ritmo y la emoción!</p>
                         <a href="views/instrument.html" class="go-button">GO!</a>
                     </div>
                     <div class="slide">
                         <img src="assets/guitar.png" alt="Guitarra">
-                        <h2>Guitarra</h2>
-                        <p>La guitarra, con sus vibrantes cuerdas, crea melodías que resuenan en el corazón. ¡Un instrumento lleno de pasión!</p>
+                        <h2>Guitar</h2>
+                        <p id="guitar-desc-mob-en">The guitar, with its vibrant strings, creates melodies that resonate in the heart. An instrument full of passion!</p>
+                        <p id="guitar-desc-mob-es" style="display:none;">La guitarra, con sus vibrantes cuerdas, crea melodías que resuenan en el corazón. ¡Un instrumento lleno de pasión!</p>
                         <a href="views/instrument.html" class="go-button">GO!</a>
                     </div>
                 </div>
@@ -124,65 +133,49 @@
                 <button class="nav-button next" id="nextButton">&gt;</button>
             </div>
         </div>
-
     </main>
 
+
+
+
+    <!-- Aside Section -->
     <aside>
         <h1>INSTRUMENT GALLERY</h1>
-
-
-
         <div>
-            <img src="assets/images/pngtree-piano-icon-vector-png-image_5941830-removebg-preview-removebg-preview(1).png"
-                alt="piano">
-            <p>The piano, with its 24 keys, turns beats into captivating melodies.¡An instrument full of magic!</p>
+            <img src="assets/images/pngtree-piano-icon-vector-png-image_5941830-removebg-preview-removebg-preview(1).png" alt="piano">
+            <p id="piano-gallery-desc-en">The piano, with its 24 keys, turns beats into captivating melodies. An instrument full of magic!</p>
+            <p id="piano-gallery-desc-es" style="display:none;">El piano, con sus 24 teclas, convierte los ritmos en melodías cautivadoras. ¡Un instrumento lleno de magia!</p>
             <button>GO</button>
         </div>
-
-
-
         <div>
-            <img src="assets/images/drum-icon-music-drums-symbol-260nw-2259865115-removebg-preview-removebg-preview.png"
-                alt="drums set">
-            <p>The drums, with their powerful rhythm, set the pulse of the music.Its rhythm creates energy and
-                emotion, ¡essential for the beat!</p>
+            <img src="assets/images/drum-icon-music-drums-symbol-260nw-2259865115-removebg-preview-removebg-preview.png" alt="drums set">
+            <p id="drums-gallery-desc-en">The drums, with their powerful rhythm, set the pulse of the music. Essential for rhythm!</p>
+            <p id="drums-gallery-desc-es" style="display:none;">La batería, con su ritmo poderoso, marca el pulso de la música. ¡Esencial para el ritmo!</p>
             <button>GO</button>
         </div>
-
-
         <div>
             <img src="assets/images/Captura_desde_2024-10-30_11-34-45-removebg-preview.png" alt="guitar">
-            <p>The guitar, with its vibrant strings, creates melodies that resonate in the heart. ¡An instrument
-                full of passion!</p>
+            <p id="guitar-gallery-desc-en">The guitar, with its vibrant strings, creates melodies that resonate in the heart. An instrument full of passion!</p>
+            <p id="guitar-gallery-desc-es" style="display:none;">La guitarra, con sus vibrantes cuerdas, crea melodías que resuenan en el corazón. ¡Un instrumento lleno de pasión!</p>
             <button>GO</button>
         </div>
-
-
-
-    </aside>-->
+    </aside>
+    <!-- Footer Section -->
     <footer>
         <p class="iconos-mover">
-            <a href="https://es-es.facebook.com/" target="_blank"><img src="assets/icons/icons8-facebook-48(1).png"
-                    alt="Icon facebook"></a>
-            <a href="https://www.instagram.com/" target="-blank"><img src="assets/icons/icons8-instagram-48(1).png"
-                    alt="Icon instagram"></a>
-                    <a href="https://x.com/?lang=en" target="_blank"><img src="assets/icons/icons8-x-50.png" alt="Icon x"></a>
-                </p>
-                <p class="parrafo-footer">© 2024 Ding Dom. Todos los derechos reservados.</p>
-            </footer>
-
-
-
-
+            <a href="https://es-es.facebook.com/" target="_blank"><img src="assets/icons/icons8-facebook-48(1).png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="assets/icons/icons8-instagram-48(1).png" alt="Instagram"></a>
+            <a href="https://x.com/?lang=en" target="_blank"><img src="assets/icons/icons8-x-50.png" alt="X"></a>
+        </p>
+        <p class="parrafo-footer">© 2024 Ding Dom. All rights reserved.</p>
     </footer>
-        
-    <script src="js/index.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/heroimage.js"></script>
-    <script src="js/tranlate.js"></script>
-    
 
-
+    <script>
+     
+    </script>
+       <script src="js/index.js"></script>
+       <script src="js/script.js"></script>
+       <script src="js/heroimage.js"></script>
+       <script src="js/translate.js"></script>
 </body>
-
 </html>

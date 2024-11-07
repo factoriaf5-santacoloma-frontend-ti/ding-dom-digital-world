@@ -9,8 +9,25 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/instruments.css">
     <title>Instruments</title>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,es',  
+                autoDisplay: false,  
+                                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
+   <!-- T B -->
+   <button id="translateButton">Translate to Spanish</button>
+
+   <!-- Google Translate  -->
+   <div id="google_translate_element"></div>
+
     <header>
         <div class="contenedor">
             <img id="logo" src="/assets/images/Captura_desde_2024-10-29_13-09-01-removebg-preview.png" alt="This is the Ding Dom banner ">
@@ -90,5 +107,6 @@
     <script src="/js/index.js"></script>
     <script src="../js/piano.js"></script>
     <script src="../js/tranlate.js"></script>
+
 </body>
 </html>
