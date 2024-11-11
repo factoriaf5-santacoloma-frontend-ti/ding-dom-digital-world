@@ -31,6 +31,13 @@ footer {
     padding: 0;
     margin: 0;
 }
+.iconos-mover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    gap: 15px;
+}
 
 #logo{
     width: 250px;
@@ -132,7 +139,7 @@ footer {
     }
 
     .nav-list a {
-        font-size: 25px;
+        font-size: 35px;
     }
 
     #cerrar {
