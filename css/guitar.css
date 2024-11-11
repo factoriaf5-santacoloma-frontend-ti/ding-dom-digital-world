@@ -15,10 +15,10 @@
     0,
     0,
     0.5
-  ); /* Fondo negro semi-transparente para crear un efecto de superposición. */
-  justify-content: center; /* Centra el contenido del modal horizontalmente. */
-  align-items: center; /* Centra el contenido del modal verticalmente. */
-  z-index: 10; /* Asegura que el modal esté por encima de otros elementos (con un z-index más bajo). */
+  ); 
+  justify-content: center; 
+  align-items: center; 
+  z-index: 10; 
 }
 .modal-content2 {
   position: relative; /* Permite que los elementos dentro del modal se posicionen relativos a este. */
