@@ -1,25 +1,27 @@
 window.onload = function() {
-  const modal = document.getElementById("modal2");
-  const openModalBoton = document.getElementById("openModal2"); 
-  const closeModalBoton = document.querySelector(".close-btn2");
-
-  openModalBoton.addEventListener("click", () => {
-    modal.style.display = "flex";
-  });
-
-  closeModalBoton.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  });
+    const modal2 = document.getElementById("modal2");
+    const openModalBtn2 = document.getElementById("openModal2"); 
+    const closeModalBtn2 = document.querySelector(".close-btn2");
+    
+    openModalBtn2.addEventListener("click", () => {
+      modal2.style.display = "flex";
+    });
+  
+    closeModalBtn2.addEventListener("click", () => {
+      modal2.style.display = "none";
+    });
+  
+    // Cerrar el segundo modal al hacer clic fuera del contenido
+    window.addEventListener("click", (event) => {
+      if (event.target === modal2) {
+        modal2.style.display = "none";
+      }
+    });
 };
 
+
 // Crear contexto de audio
-const context = new (window.AudioContext || window.webkitAudioContext)();
+const context = new (window.AudioContext || window.AudioContext)();
 
 // Cantidad de amortiguación de la señal
 let dampening = 0.99;

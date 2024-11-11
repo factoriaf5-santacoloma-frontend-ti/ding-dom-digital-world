@@ -1,4 +1,4 @@
-#openModal {
+#openModal2{
   padding: 10px 20px; /* Añade espacio dentro del botón: 10px arriba y abajo, 20px a los lados. */
   font-size: 16px; /* Establece el tamaño de fuente en 16 píxeles. */
   cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón, indicando que es clickeable. */
@@ -30,7 +30,6 @@
   text-align: center; /* Centra el texto dentro del contenido del modal. */
   color: white; /* Establece el color del texto en blanco. */
 }
-
 
 .close-btn2 {
   position: absolute; /* Posiciona el botón de cerrar absolutamente dentro del modal. */

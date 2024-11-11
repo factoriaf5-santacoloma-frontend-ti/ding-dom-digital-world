@@ -20,12 +20,6 @@ window.addEventListener("click", (event) => {
   }
 });
 
-
-
-
-
-
-
 const drums = document.querySelectorAll('.drum');
 
 
