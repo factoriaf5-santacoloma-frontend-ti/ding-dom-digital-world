@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Sets padding and margin to 0 for the body, and applies border-box sizing */
 body {
     padding: 0;
@@ -139,3 +140,208 @@ footer {
         display: none;
     }
 }
+=======
+/* Sets padding and margin to 0 for the body, and applies border-box sizing */
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*--------------- This is the navigation styling --------------------------*/
+
+/* Sets the font for all paragraph text to 'Lato' */
+p {
+    font-family: 'Lato';
+}
+
+/* Sets font family to "Neucha" for all heading elements */
+h1, h2, h3, h4, h5 {
+    font-family: "Neucha";
+}
+
+/* Applies "Neucha" font to all anchor tags */
+a {
+    font-family: "Neucha";
+}
+
+/* Container for navigation, aligns items with flexbox, centers text,
+spaces items between, adds padding, background color, and sets height */
+.contenedor {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: black;
+    /* height: 65px; */
+    /* margin-bottom: 0; */
+    /* margin-top: 300px; */
+}
+
+#logo{
+    width: 200px;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 9rem; /* Ajusta el espacio entre los elementos */
+    margin-left: -800px; /* Empuja la lista a la derecha */
+    font-size: 40px; /* Ajusta el tamaño si es necesario */
+}
+
+.nav-list a {
+  
+    color: #65D5DB; /* Color del texto */
+    text-decoration: none;
+}
+/* Navigation links styling: removes underline and applies color */
+.nav-list li a {
+     text-decoration: none;
+     color: #65D5DB;
+}
+
+/* Hide the menu open button by default */
+.abrir-menu {
+    display: none;
+}
+
+/* Hide the close button by default */
+#cerrar {
+    display: none;
+}
+
+/* Footer styling: sets background color, full width, and text color */
+footer {
+    background-color: #8ED1D5;
+    width: 100%;
+    color: white;
+}
+
+/* Paragraph styling in footer: black text, center alignment, no padding/margin */
+.parrafo-footer {
+    color: black;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Icons styling in footer: centers them with flexbox, padding, and spacing */
+.iconos-mover {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    gap: 2rem;
+}
+
+/* ---------- Media Query for screens 768px and smaller ---------- */
+@media (max-width: 799px) {
+
+    
+    .contenedor{
+        margin-top: 130px;
+    }
+
+    /* Flexbox for nav items, space between items, and increases font size */
+    .nav-list {
+        list-style-type: none;
+        display: flex;
+        gap: 3rem;
+        font-size: 25px;
+        
+    }
+
+    /* Show the menu button with black background for smaller screens */
+    .abrir-menu {
+        display: block;
+        background-color: black;
+        border: black;
+        margin-left: -97px;
+        margin-top: -6px;
+    }
+
+    /* Logo styling: sets dimensions and margins */
+    #logo {
+        width: 250px;
+        margin-top: 0;
+    }
+
+    /* Menu button image size */
+    .abrir-menu img {
+        width: 45px;
+        
+
+        
+    }
+
+    /* Shows the close button with black background */
+    #cerrar {
+        display: block;
+        background-color: black;
+        border: black;
+    }
+
+    /* Close button image size */
+    #cerrar img {
+        width: 30px;
+    }
+
+    /* Sets nav container as invisible by default with hidden visibility */
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1;
+    }
+
+    /* Sets black background and width for nav container */
+    .nav div {
+        background-color: black;
+        width: 270px;
+    }
+
+    /* Positions close button within the nav container */
+    .nav #cerrar {
+        margin-left: 200px;
+        margin-bottom: 50px;
+        margin-top: 10px;
+    }
+
+    /* Makes nav container a vertical, column-aligned menu */
+    .nav {
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        box-shadow: 0 0 0 1000vmax rgba(0, 0, 0, .5);
+        display: flex;
+        z-index: 990;
+        margin-left: -410px;
+        transform: translate(7%, -25%);
+        opacity: visible;
+    }
+
+    /* Applies visible style to nav when active */
+    .nav.visible {
+        opacity: 1000;
+        visibility: visible;
+    }
+
+    /* Makes nav list a column and applies bottom margin */
+    .nav-list {
+         flex-direction: column;
+         margin-bottom: 730px;
+    }
+
+    /* Ensures image is positioned below other elements */
+    .imagen-debajo img {
+        z-index: 0;
+    }
+}
+
+
+
+>>>>>>> 56347b2 (hola)
