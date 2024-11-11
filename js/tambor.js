@@ -1,4 +1,3 @@
-
 // Obtener elementos
 const modal1 = document.getElementById("modal1");
 const openModalBtn1 = document.getElementById("openModal1");

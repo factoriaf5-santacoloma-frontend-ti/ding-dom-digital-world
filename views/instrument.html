@@ -8,9 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/instruments.css">
-    <link rel="stylesheet" href="/css/piano.css">
     <link rel="stylesheet" href="/css/guitar.css">
-    
+    <link rel="stylesheet" href="/css/tambor.css">
+    <link rel="stylesheet" href="/css/piano.css">
     <title>Instruments</title>
 </head>
 <body>
@@ -61,10 +61,36 @@
             <div>
                 <h2>DRUM SET</h2>
                 <p>The drum set is a percussion instrument consisting of a set of drums and cymbals. It is played by striking the surfaces with drumsticks and is instrumental in setting the beat in various genres of music. The drum kit brings energy and structure to songs, and its versatility makes it essential in rock bands, jazz bands, pop bands and more.</p>
-                <button>TRY IT YOURSELF</button>
+                <button id="openModal1">Jugar</button>
             </div>   
+                    <!-- Modal -->
+                <div id="modal1" class="modal1">
+                    <div class="modal-content1">
+                        <span class="close-btn1">&times;</span>
+                            <div class="drumkit">
+                                <div class="drum kick kick-1" data-note="kick"></div>
+                                <div class="drum kick kick-r" data-note="kick2"></div>
+                                <div class="drum snare" data-note="snare"></div>
+                                <div class="drum cymbal hithat" data-note="hithat"></div>
+                                <div class="drum tom tom1" data-note="tom1"></div>
+                                <div class="drum tom tom2" data-note="tom2"></div>
+                                <div class="drum tom tom3" data-note="tom3"></div>
+                                <div class="drum cymbal crash1" data-note="crash1"></div>
+                                <div class="drum cymbal crash2" data-note="crash2"></div>
+                            </div>
+                        <audio id="kick" src="/assets/sonido/kick.wav" hidden preload="auto"></audio>
+                        <audio id="kick2" src="/assets/sonido/kick.wav" hidden preload="auto"></audio>
+                        <audio id="snare" src="/assets/sonido/snare.wav" hidden preload="auto"></audio>
+                        <audio id="hithat" src="/assets/sonido/hihat.wav" hidden preload="auto"></audio>
+                        <audio id="tom1" src="/assets/sonido/tom1.wav" hidden preload="auto"></audio>
+                        <audio id="tom2" src="/assets/sonido/tom2.wav" hidden preload="auto"></audio>
+                        <audio id="tom3" src="/assets/sonido/tom3.wav" hidden preload="auto"></audio>
+                        <audio id="crash1" src="/assets/sonido/crash1.wav" hidden preload="auto"></audio>
+                        <audio id="crash2" src="/assets/sonido/crash2-VEED.mp3" hidden preload="auto"></audio>
+                    </div>
+                </div>
         </div>
- 
+
         
         <div class="contenedores">
             <iframe src="https://www.youtube.com/embed/lnrV4EFYxm4?si=1Lcr7LywYFgh1ao-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -91,8 +117,8 @@
                   
             </div>
         </div>
-    </main>
 
+    </main>
 
 
     <footer>
@@ -106,7 +132,9 @@
     </footer>
         
     <script src="/js/index.js"></script>
-    <script src="../js/piano.js"></script>
+    <script src="/js/piano.js"></script>
+    <script src="/js/tambor.js"></script>
     <script src="/js/guitar.js"></script>
+
 </body>
 </html>
