@@ -31,7 +31,6 @@
   color: white; /* Establece el color del texto en blanco. */
 }
 
-
 .close-btn2 {
   position: absolute; /* Posiciona el botón de cerrar absolutamente dentro del modal. */
   top: 10px; /* Coloca el botón 10 píxeles desde la parte superior del modal. */
