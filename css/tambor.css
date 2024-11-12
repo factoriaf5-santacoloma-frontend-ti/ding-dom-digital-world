@@ -1,9 +1,4 @@
-
-
-
 /*---------------------------tambor------------------------------------------*/
-
-
 #openModal1 {
     padding: 10px 10px; /* Añade espacio dentro del botón: 10px arriba y abajo, 20px a los lados. */
     font-size: 16px; /* Establece el tamaño de fuente en 16 píxeles. */
@@ -105,7 +100,7 @@
   }
   
   .drumkit .kick::after{
-    content: "V";
+    content: "W";
     background-color: #505050;
     width: 50%;
     height: 50%;
@@ -116,7 +111,7 @@
   }
   
   .drumkit .kick-r::after{
-    content: "N";
+    content: "R";
   
   
   }
@@ -155,7 +150,7 @@
   
   }
   .drumkit .snare::after{
-    content: "B";
+    content: "E";
   }
   
   .tom {
@@ -173,7 +168,7 @@
   }
   /*------------------------------tom1-----------*/
   .drumkit .tom1::after{
-    content: "G";
+    content: "Y";
   
   }
   
@@ -189,7 +184,7 @@
   /*--------------------tom2-------------------*/
   
   .drumkit .tom2::after{
-    content: "H";
+    content: "U";
   
   }
   
@@ -204,7 +199,7 @@
   
   /*--------------------tom3-------------------*/
   .drumkit .tom3::after{
-    content: "J";
+    content: "I";
   
   }
   
@@ -257,7 +252,7 @@
   }
   /*------------------plato1-------------------*/
   .drumkit .hithat::after{
-    content: "M";
+    content: "T";
   
   }
   
@@ -274,7 +269,7 @@
   
   /*------------------plato2---------------------*/
   .drumkit .crash1::after{
-    content: "K";
+    content: "O";
   
   }
   
@@ -290,7 +285,7 @@
   
   /*--------------------------plato3----------------*/
   .drumkit .crash2::after{
-    content: "F";
+    content: "Q";
   
   }
   

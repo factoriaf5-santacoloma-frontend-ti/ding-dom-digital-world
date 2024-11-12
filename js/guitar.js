@@ -1,4 +1,4 @@
-window.onload = function() {
+// window.onload = function() {
     const modal2 = document.getElementById("modal2");
     const openModalBtn2 = document.getElementById("openModal2"); 
     const closeModalBtn2 = document.querySelector(".close-btn2");
@@ -17,7 +17,7 @@ window.onload = function() {
         modal2.style.display = "none";
       }
     });
-};
+// };
 
 
 // Crear contexto de audio
