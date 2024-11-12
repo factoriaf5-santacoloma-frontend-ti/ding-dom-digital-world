@@ -21,16 +21,6 @@ window.addEventListener("click", (event) => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
 // Selecciona el contenedor del piano en el DOM y define la ruta de la carpeta de audios
 let pianoContainer = document.getElementsByClassName("piano-container")[0];
 const base = "/assets/sounds/piano/"; // Ruta base donde están los archivos de audio de las teclas

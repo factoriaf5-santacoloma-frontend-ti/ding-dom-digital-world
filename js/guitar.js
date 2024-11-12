@@ -26,7 +26,7 @@ let dampening = 0.99;
 
 // Función para generar el sonido de una cuerda al "tocar"
 function pluck(frequency) {
-    const pluck = context.createScriptProcessor(4096, 0, 1);
+    const pluck = context (createScriptProcessor(4096, 0, 1));
 
     // Periodo de la señal en muestras
     const N = Math.round(context.sampleRate / frequency);
@@ -38,8 +38,8 @@ function pluck(frequency) {
     }
 
     let n = 0;
-    pluck.onaudioprocess = function (e) {
-        const output = e.outputBuffer.getChannelData(0);
+    pluck.onAudioprocess = function (e) {
+        const output = e. outputBuffer.getChannelData(0);
         for (let i = 0; i < e.outputBuffer.length; i++) {
             y[n] = (y[n] + y[(n + 1) % N]) / 2;
             output[i] = y[n];
